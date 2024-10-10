@@ -51,25 +51,25 @@ const Login = () => {
 
   return (
     <div>
-      <div className='h-screen flex flex-col md:flex-row md:justify-around justify-center items-center bg-black p-5'>
+      <div className='h-screen flex flex-col md:flex-row md:justify-around justify-center items-center bg-white p-5'>
         <div>
           <img
-            src="https://img.freepik.com/free-vector/new-2023-twitter-logo-x-icon-design_1017-45418.jpg?size=626&ext=jpg"
+            src="https://i.pinimg.com/564x/85/4d/4d/854d4db87341a11bf63b4cae13cead76.jpg"
             alt="logo"
-            className="rounded-full w-[60%] hover:border-gray-500"
+            className="rounded-full w-[60%] md:w-[100%] hover:border-gray-500"
           />
         </div>
         <div>
           <div>
-            <h1 className='text-white font-extrabold text-4xl p-5'>Welcome Back</h1>
+            <h1 className='text-black font-extrabold text-4xl p-5'>Welcome Back</h1>
           </div>
           <div>
-            <h1 className='text-white font-extrabold text-2xl p-5'>Sign in to your account.</h1>
+            <h1 className='text-black font-extrabold text-2xl p-5'>Sign in to your account.</h1>
             <form className='flex flex-col gap-4' onSubmit={handleLogin}>
               <input
                 type="text"
                 placeholder='Email address'
-                className='bg-gray-800 p-3 rounded-lg text-white'
+                className=' border-2  p-3 rounded-lg text-black'
                 value={email}
                 onChange={(e) => {
                   setEmail(e.target.value);
@@ -79,7 +79,7 @@ const Login = () => {
               <input
                 type="password"
                 placeholder='Password'
-                className='bg-gray-800 p-3 rounded-lg text-white'
+                className='  border-2 text-black p-3 rounded-lg text-black'
                 value={password}
                 onChange={(e) => {
                   setPassword(e.target.value);
@@ -87,14 +87,14 @@ const Login = () => {
                 }}
               />
               {errors && <p className='text-red-500'>{errors}</p>}
-              <button className='bg-blue-500 p-3 rounded-lg text-white' type='submit' disabled={loading}>
+              <button className='bg-black p-3 rounded-lg text-white' type='submit' disabled={loading}>
                 {loading ? 'Signing in...' : 'Sign in'}
               </button>
             </form>
           </div>
           <div className='mt-5'>
-            <h1 className='text-white font-extrabold text-2xl p-5'>Don't have an account?</h1>
-            <button className='text-blue-500 p-3 rounded-full border w-full border-gray-700 font-bold' onClick={() => navigate('/signup')}>
+            <h1 className='text-black font-extrabold text-2xl p-5'>Don't have an account?</h1>
+            <button className='text-black p-3 rounded-full border w-full border-gray-700 font-bold' onClick={() => navigate('/signup')}>
               Sign up
             </button>
           </div>

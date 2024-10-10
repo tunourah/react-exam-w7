@@ -7,7 +7,7 @@ const Signup = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [yourname, setYourname] = useState('');
-  const [profile, setProfile] = useState('');
+ 
   const [errors, setErrors] = useState(''); // Add error state for displaying error messages
 
   const validateForm = () => {
@@ -67,69 +67,60 @@ const Signup = () => {
 
   return (
     <div>
-      <div className='h-screen flex flex-col md:flex-row md:justify-around justify-center items-center bg-black p-5'>
+      <div className='h-screen flex flex-col md:flex-row md:justify-around justify-center items-center bg-white p-5'>
         <div>
           <img
-            src="https://img.freepik.com/free-vector/new-2023-twitter-logo-x-icon-design_1017-45418.jpg?size=626&ext=jpg"
+            src="https://i.pinimg.com/564x/85/4d/4d/854d4db87341a11bf63b4cae13cead76.jpg"
             alt="logo"
-            className="rounded-full w-[60%] hover:border-gray-500"
+            className="rounded-full w-[60%] md:w-[100%] hover:border-gray-500"
           />
         </div>
         <div>
           <div>
-            <h1 className='text-white font-extrabold text-4xl p-5'>Happening now</h1>
+            <h1 className='text-black font-extrabold text-4xl p-5'>  library</h1>
           </div>
           <div>
-            <h1 className='text-white font-extrabold text-2xl p-5'>Join X today.</h1>
+            <h1 className='text-black font-extrabold text-2xl p-5'>Join With Us </h1>
             <form className='flex flex-col gap-4' onSubmit={handleSignup}>
               <input
                 type="text"
                 placeholder='Email address'
-                className='bg-gray-800 p-3 rounded-lg text-white'
+                 className=' border-2  p-3 rounded-lg text-black'
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
               <input
                 type="text"
                 placeholder='User Name'
-                className='bg-gray-800 p-3 rounded-lg text-white'
+               className=' border-2  p-3 rounded-lg text-black'
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
               />
               <input
                 type="text"
                 placeholder='Your Name'
-                className='bg-gray-800 p-3 rounded-lg text-white'
+                className=' border-2  p-3 rounded-lg text-black'
                 value={yourname}
                 onChange={(e) => setYourname(e.target.value)}
                 />
-                <input
-                type="text"
-                placeholder='Profile Picture'
-                className='bg-gray-800 p-3 rounded-lg text-white'
-                value={profile}
-                onChange={(e) => setProfile(e.target.value
-                )}
-
-
-                 />
+              
               <input
                 type="password"
                 placeholder='Password'
-                className='bg-gray-800 p-3 rounded-lg text-white'
+                className=' border-2  p-3 rounded-lg text-black'
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
               {errors && <p className='text-red-500'>{errors}</p>} {/* Display error messages */}
-              <button className='bg-blue-500 p-3 rounded-lg text-white' type='submit'>
+              <button className='bg-black p-3 rounded-lg text-white' type='submit'>
                 Sign up
               </button>
             </form>
           </div>
           <div className='mt-5'>
-            <h1 className='text-white font-extrabold text-2xl p-5'>Already have an account?</h1>
+            <h1 className='text-black font-extrabold text-2xl p-5'>Already have an account?</h1>
             <Link  to="/login">
-            <button className='text-blue-500 p-3 rounded-full border w-full border-gray-700 font-bold'>
+            <button className='text-black hover:bg-white hover:text-black p-3 rounded-full border w-full border-gray-700 font-bold'>
               Sign in
             </button>
             </Link>

@@ -1,55 +1,61 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Header from '../component/Header'
+import Footer from '../component/Footer'
+import '../App.css'
 const home = () => {
   return (
-    <div>
-        <nav className='flex justify-between items-center p-4'>
-   {/* logo */}
-<div>
-<h1 className='font-extrabold text-lg text-enter'>Books</h1>
-</div>
-      <ul className='flex gap-4'>
-        <li>
-      <Link to={"/"}>Home</Link>    
-        </li>
-        {/* <li>
-      <Link to={'/login'}>Login</Link>   
-        </li> */}
-        {/* <li>
-     <Link to={"/signup"}></Link> Sign up
-        </li> */}
-        <li>
-            library 
-        </li>
-        <li>
-            fivorite 
-        </li>
-        </ul>
-      <div>
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-  <path strokeLinecap="round" strokeLinejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+    <div className='flex flex-col '>
+     <Header    />
+
+        <div className='flex flex-col md:flex-row justify-around items-center h-screen'>
+           <div>
+            <img src="https://i.pinimg.com/564x/fe/56/21/fe5621aeab0d5e6098c4ed2c57348f87.jpg" alt="books" />
+           </div>
+           <div className=' flex flex-col items-center justify-between gap-4 '>
+            <div>
+            <h1 className='font-bold text-2xl mb-2 md:text-6xl  text-center'>
+            Get All The Books
+            You Need!
+            </h1>
+            </div>
+         
+           <div>
+           <p className='mx-2 md:text-2xl'>  Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+           </div>
+           <Link to={'/booksdisplay'}>
+            <button className='border-2 flex gap-2 items-center border-black bg-black text-white p-2 md:text-2xl  text-whit hover:rounded-full shadow-lg  '>
+                Strat Reading <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
 </svg>
 
-      </div>
-
-        </nav>
-
-        <div className='flex flex-col md:flex-row justify-around items-center'>
-           <div>
-            <img src="https://i.pinimg.com/564x/fe/56/21/fe5621aeab0d5e6098c4ed2c57348f87.jpg" alt="" />
-           </div>
-           <div className=' flex flex-col items-center justify-between gap-4'>
-            <h1 className='font-bold text-2xl '>
-                Online Library
-            </h1>
-            <p> Get All Book you Need</p>
-            <button className='bg-blue-500 p-3   text-white hover:rounded-full  '>
-                Strat Reading
             </button>
-
+</Link>
            </div>
         </div>
+        <div>
+    <h1 className='text-2xl md:text-4xl font-bold text-center'>Why Choose Us?</h1>
+   
+</div>
+        <div className=' container flex flex-col-reverse md:flex-row justify-around flex-wrap items-center '>
+
+<div>
+        <img src="https://i.pinimg.com/564x/aa/45/1e/aa451eb4d83e5e463206131b6627036b.jpg" alt=""  />
+    </div>
+     <div>
+        <ul className='w-full'>
+            <li> <h1 className='text-2xl    '>Easy to Use</h1></li>
+            <li> <h1 className='text-2xl  '>Fast Delivery</h1></li>
+            <li> <h1 className='text-2xl  '>Affordable</h1></li>
+            <li> <h1 className='text-2xl  '>Quality Books</h1></li>
+        </ul>
+     </div>
+        </div>
         
+        
+        <Footer />
+    
+
     </div>
   )
 }
