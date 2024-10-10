@@ -39,7 +39,7 @@ const Signup = () => {
       return;
     }
 
-    const newUser = { email, username, password, yourname };
+    const newUser = { email, username, password };
 
     try {
       const response = await axios.post(
@@ -94,13 +94,7 @@ const Signup = () => {
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
               />
-              <input
-                type="text"
-                placeholder="Your Name"
-                className=" border-2  p-3 rounded-lg text-black"
-                value={yourname}
-                onChange={(e) => setYourname(e.target.value)}
-              />
+           
               <input
                 type="password"
                 placeholder="Password"
