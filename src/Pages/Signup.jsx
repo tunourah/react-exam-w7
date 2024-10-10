@@ -39,7 +39,7 @@ const Signup = () => {
       return;
     }
 
-    const newUser = { email, username, password, yourname, profile };
+    const newUser = { email, username, password, yourname };
 
     try {
       const response = await axios.post(
