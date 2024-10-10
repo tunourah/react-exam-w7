@@ -8,15 +8,12 @@ const Header = () => {
  <h1 className='font-extrabold text-lg text-enter'>Books</h1>
  </div>
        <ul className='flex gap-4'>
-         <li>
+         <li  className='hover:border-black hover:border-b-4'>
        <Link to={"/home"}>Home</Link>    
          </li>
-         {/* <li>
-       <Link to={'/login'}>Login</Link>   
-         </li> */}
-         {/* <li>
-      <Link to={"/signup"}></Link> Sign up
-         </li> */}
+         <li className='hover:border-black hover:border-b-4'>
+         <Link to={"/booksdisplay"}>Books</Link>
+            </li>
          
          </ul>
        <div className='flex'>
