@@ -3,7 +3,7 @@ import React from 'react';
 const Mark = ({ reads }) => {
   return (
     <div>
-      <h2 className="text-center text-2xl font-bold text-white bg-slate-400 p-4 mt-5">Mark</h2>
+      <h2 className="text-center text-2xl font-bold text-white bg-slate-400 p-4 mt-5">Book Mark</h2>
       {reads.length === 0 ? (
         <p>No favorite books added yet.</p>
       ) : (

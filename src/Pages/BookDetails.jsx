@@ -32,13 +32,24 @@ const BookDetails = () => {
   if (!book) return <p>Book not found</p>;
 
   return (
-    <div>
+    <div className='container flex flex-col '>
+      <div>
       <img src={book.book_image} alt={book.title} />
+      </div>
+      
       <h1>{book.title}</h1>
+      <div>
       <p>Description: {book.description}</p>
-      <p>Author: {book.author}</p>
-      <a href={book.amazon_product_url} target="_blank" >
-        Buy this book
+      </div>
+  <div>
+  <p>Author: {book.author}</p>
+  </div>
+   
+      <a className='border-b-2 flex items-center justify-center'  href={book.amazon_product_url} target="_blank" >
+        Buy this book <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+</svg>
+
       </a>
   
     </div>
